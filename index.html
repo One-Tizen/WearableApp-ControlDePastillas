@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+<title>Recordario Pastillas</title>
+
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+	<div data-role="page" id="page1" data-theme="b" data-fullscreen="true">
+		<div data-role="header" data-position="fixed">
+			<div id="id_next_header_1" Align="Center" style="font-size: 25px;">Siguiente</div>
+		</div>
+
+		<div data-role="content">
+			<div id="id_next_remain" ALIGN="CENTER"
+				style="font-size: 70px; color: #f99107">--:--</div>
+			<div id="id_next_time" ALIGN="CENTER"
+				style="font-size: 35px; color: #ffffff">--:--</div>
+			<div id="id_next_pills_status" ALIGN="CENTER">
+				<img id="id_next_pills" src="images/icon_bill_green_0.png"
+					width="85" height="50" />
+			</div>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="" id="id_next_voice_btn"
+						style="font-size: 25px; color: #ffffff">Nota de Voz</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- All Reminders -->
+	<div data-role="page" id="page_all" data-theme="b"
+		data-fullscreen="true">
+		<div data-role="header" data-position="fixed">
+			<div data-role="navbar" class="c_navbar1">
+				<ul>
+					<li><a href="" id="id_btn_switch_1" class="c_Switch"
+						style="font-size: 22px; color: #07f93a">1</a></li>
+					<li><a href="" id="id_btn_switch_2"  class="c_Switch"
+						style="font-size: 22px; color: #077ef9">2</a></li>
+					<li><a href="" id="id_btn_switch_3"  class="c_Switch"
+						style="font-size: 22px; color: #c907f9">3</a></li>
+				</ul>
+			</div>
+
+		</div>
+		<div data-role="content">
+
+			<div id="id_section_1" align="center">
+				<br /> 
+				<section class="ui-grid-b">
+					<div class="ui-block-a" align="center">
+						<img id="id_med_status_1" src="images/icon_bill_green_0.png"
+							width="85" height="50" />
+					</div>
+					<div class="ui-block-b" id="id_days_1"
+						style="font-size: 38px; color: #07f93a" align="center">0</div>
+					<div class="ui-block-c" id="id_count_1"
+						style="font-size: 38px; color: #07f93a" align="center">00:00</div>
+				</section>
+
+				<a class="c_voice" data-role="button" data-inline="true" href="">
+					<img id="id_btn_voice_1" src="images/icon_voice.png" width="80px" height="38px" />
+				</a>
+			</div>
+			<div id="id_section_2" align="center" style="display: none">
+			<br /> 
+				<section class="ui-grid-b">
+					<div class="ui-block-a" align="center">
+						<img id="id_med_status_2" src="images/icon_bill_blue_0.png"
+							width="85" height="50" />
+					</div>
+					<div class="ui-block-b" id="id_days_2"
+						style="font-size: 38px; color: #077ef9" align="center">0</div>
+					<div class="ui-block-c" id="id_count_2"
+						style="font-size: 38px; color: #077ef9" align="center">--:--</div>
+				</section>
+				<a  class="c_voice" data-role="button" data-inline="true" href="">
+					<img id="id_btn_voice_2" src="images/icon_voice.png" width="80px" height="38px" />
+				</a>
+			</div>
+			<div id="id_section_3" align="center" style="display: none">
+			<br /> 
+				<section class="ui-grid-b">
+					<div class="ui-block-a" align="center">
+						<img id="id_med_status_3" src="images/icon_bill_viola_0.png"
+							width="85" height="50" />
+					</div>
+					<div class="ui-block-b" id="id_days_3"
+						style="font-size: 38px; color: #c907f9" align="center">9</div>
+					<div class="ui-block-c" id="id_count_3"
+						style="font-size: 38px; color: #c907f9" align="center">--:--</div>
+				</section>
+				<a class="c_voice" data-role="button" data-inline="true" href="">
+					<img id="id_btn_voice_3"  src="images/icon_voice.png" width="80px" height="38px" />
+				</a>
+			</div>
+			<div id="id_section_4" align="center" style="display: none">
+			<br /> 
+				<section class="ui-grid-b">
+					<div class="ui-block-a" align="center">
+						<img id="id_med_status_4" src="images/icon_bill_red_0.png"
+							width="85" height="50" />
+					</div>
+					<div class="ui-block-b" id="id_days_4"
+						style="font-size: 38px; color: #f92307" align="center">0</div>
+					<div class="ui-block-c" id="id_count_4"
+						style="font-size: 38px; color: #f92307" align="center">--:--</div>
+				</section>
+				<a class="c_voice" data-role="button" data-inline="true" href="">
+					<img id="id_btn_voice_4"  src="images/icon_voice.png" width="80px" height="38px" />
+				</a>
+			</div>
+			<div id="id_section_5" align="center" style="display: none">
+			<br /> 
+				<section class="ui-grid-b">
+					<div class="ui-block-a" align="center">
+						<img id="id_med_status_5" src="images/icon_bill_yellow_0.png"
+							width="85" height="50" />
+					</div>
+					<div class="ui-block-b" id="id_days_5"
+						style="font-size: 38px; color: #d4f828" align="center">0</div>
+					<div class="ui-block-c" id="id_count_5"
+						style="font-size: 38px; color: #d4f828" align="center">--:--</div>
+				</section>
+				<a class="c_voice" data-role="button" data-inline="true" href="">
+					<img id="id_btn_voice_5"  src="images/icon_voice.png" width="80px" height="38px" />
+				</a>
+			</div>
+			<div id="id_section_6" align="center" style="display: none">
+			<br /> 
+				<section class="ui-grid-b">
+					<div class="ui-block-a" align="center">
+						<img id="id_med_status_6" src="images/icon_bill_white_0.png"
+							width="85" height="50" />
+					</div>
+					<div class="ui-block-b" id="id_days_6"
+						style="font-size: 38px; color: #ffffff" align="center">0</div>
+					<div class="ui-block-c" id="id_count_6"
+						style="font-size: 38px; color: #ffffff" align="center">--:--</div>
+				</section>
+				<a  class="c_voice" data-role="button" data-inline="true" href="">
+					<img id="id_btn_voice_6" src="images/icon_voice.png" width="80px" height="38px" />
+				</a>
+			</div>
+
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar" class="c_navbar1">
+				<ul>
+					<li><a href="" id="id_btn_switch_4" class="c_Switch"
+						style="font-size: 22px; color: #f92307">4</a></li>
+					<li><a href="" id="id_btn_switch_5" class="c_Switch"
+						style="font-size: 22px; color: #d4f828">5</a></li>
+					<li><a href="" id="id_btn_switch_6" class="c_Switch"
+						style="font-size: 22px; color: #ffffff">6</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<!-- reminder 1 -->
+
+	<div data-role="page" id="page_reminder1" data-theme="b"
+		data-fullscreen="true">
+		<div data-role="header" data-position="fixed">
+			<div id="id_reminder_header_1" Align="Center"
+				style="font-size: 25px; color: #07f93a">Recordatorio 1</div>
+		</div>
+
+		<div data-role="content">
+
+			<div id="id_reminder_set1">
+				<label for="s_reminder_bills1" id="id_s_notify"
+					style="font-size: 25px; text-align: center">Numero de pastillas</label>
+				<select id="id_select_reminder_bills1" class="selectBillsType"
+					name="s_reminder_bills1">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+				</select> <input id="id_reminder_input_1" class="c_reminderInput" type="time"
+					style="font-size: 25px; text-align: center"></input>
+
+			</div>
+			<div id="id_remind_run1" style="display: none;">
+				<div id="id_reminder_active_1" ALIGN="CENTER"
+					style="font-size: 80px; color: #07f93a">04:20</div>
+				<div id="id_reminder_billsno_1" ALIGN="CENTER"
+					style="font-size: 35px; color: #ffffff">
+					<img id="id_reminder_status_1" src="images/icon_bill_green_1.png"
+						width="85" height="50" />
+				</div>
+			</div>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar" id="id_remind1_navbar1" class="c_navbar1">
+				<ul>
+					<li><a href="" id="id_remind_set1" class="c_SetBtn"
+						style="font-size: 22px; color: #ffffff">Establecer</a></li>
+					<li><a href="" id="id_remind_record1" class="c_RecordBtn"
+						style="font-size: 22px; color: #ffffff">Grabar</a></li>
+				</ul>
+			</div>
+			<div data-role="navbar" id="id_remind1_navbar2"
+				style="display: none;">
+				<ul>
+					<li><a href="" id="id_remind_stop1" class="c_StopBtn"
+						style="font-size: 22px; color: #ffffff">Parar</a></li>
+					<li><a href="" id="id_remind_mute1" class="c_MuteBtn"
+						style="font-size: 22px; color: #ffffff">Silenciar</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- reminder 2 -->
+
+	<div data-role="page" id="page_reminder2" data-theme="b"
+		data-fullscreen="true">
+		<div data-role="header" data-position="fixed">
+			<div id="id_reminder_header_2" Align="Center"
+				style="font-size: 25px; color: #077ef9">Recordatorio 2</div>
+		</div>
+
+		<div data-role="content">
+
+			<div id="id_reminder_set2">
+				<label for="s_reminder_bills2" id="id_s_notify"
+					style="font-size: 25px; text-align: center">Numero de pastillas</label>
+				<select id="id_select_reminder_bills2" class="selectBillsType"
+					name="s_reminder_bills2">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+				</select> <input id="id_reminder_input_2" class="c_reminderInput" type="time"
+					style="font-size: 25px; text-align: center"></input>
+
+			</div>
+			<div id="id_remind_run2" style="display: none;">
+				<div id="id_reminder_active_2" ALIGN="CENTER"
+					style="font-size: 80px; color: #077ef9">04:20</div>
+				<div id="id_reminder_billsno_2" ALIGN="CENTER"
+					style="font-size: 35px; color: #ffffff">
+					<img id="id_reminder_status_2" src="images/icon_bill_blue_0.png"
+						width="85" height="50" />
+				</div>
+			</div>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar" id="id_remind2_navbar1" class="c_navbar1">
+				<ul>
+					<li><a href="" id="id_remind_set2" class="c_SetBtn"
+						style="font-size: 22px; color: #ffffff">Establecer</a></li>
+					<li><a href="" id="id_remind_record2" class="c_RecordBtn"
+						style="font-size: 22px; color: #ffffff">Grabar</a></li>
+				</ul>
+			</div>
+			<div data-role="navbar" id="id_remind2_navbar2"
+				style="display: none;">
+				<ul>
+					<li><a href="" id="id_remind_stop2" class="c_StopBtn"
+						style="font-size: 22px; color: #ffffff">Parar</a></li>
+					<li><a href="" id="id_remind_mute2" class="c_MuteBtn"
+						style="font-size: 22px; color: #ffffff">Silenciar</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- reminder 3 -->
+
+	<div data-role="page" id="page_reminder3" data-theme="b"
+		data-fullscreen="true">
+		<div data-role="header" data-position="fixed">
+			<div id="id_reminder_header_3" Align="Center"
+				style="font-size: 25px; color: #c907f9">Recordatorio 3</div>
+		</div>
+
+		<div data-role="content">
+
+			<div id="id_reminder_set3">
+				<label for="s_reminder_bills3" id="id_s_notify"
+					style="font-size: 25px; text-align: center">Numero de pastillas</label>
+				<select id="id_select_reminder_bills3" class="selectBillsType"
+					name="s_reminder_bills3">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+				</select> <input id="id_reminder_input_3" class="c_reminderInput" type="time"
+					style="font-size: 25px; text-align: center"></input>
+
+			</div>
+			<div id="id_remind_run3" style="display: none;">
+				<div id="id_reminder_active_3" ALIGN="CENTER"
+					style="font-size: 80px; color: #c907f9">04:20</div>
+				<div id="id_reminder_billsno_3" ALIGN="CENTER"
+					style="font-size: 35px; color: #ffffff">
+					<img id="id_reminder_status_3" src="images/icon_bill_viola_0.png"
+						width="85" height="50" />
+				</div>
+			</div>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar" id="id_remind3_navbar1" class="c_navbar1">
+				<ul>
+					<li><a href="" id="id_remind_set3" class="c_SetBtn"
+						style="font-size: 22px; color: #ffffff">Establecer</a></li>
+					<li><a href="" id="id_remind_record3" class="c_RecordBtn"
+						style="font-size: 22px; color: #ffffff">Grabar</a></li>
+				</ul>
+			</div>
+			<div data-role="navbar" id="id_remind3_navbar2"
+				style="display: none;">
+				<ul>
+					<li><a href="" id="id_remind_stop3" class="c_StopBtn"
+						style="font-size: 22px; color: #ffffff">Parar</a></li>
+					<li><a href="" id="id_remind_mute3" class="c_MuteBtn"
+						style="font-size: 22px; color: #ffffff">Silenciar</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- reminder 4 -->
+
+	<div data-role="page" id="page_reminder4" data-theme="b"
+		data-fullscreen="true">
+		<div data-role="header" data-position="fixed">
+			<div id="id_reminder_header_4" Align="Center"
+				style="font-size: 25px; color: #f92307">Recordatorio 4</div>
+		</div>
+
+		<div data-role="content">
+
+			<div id="id_reminder_set4">
+				<label for="s_reminder_bills4" id="id_s_notify"
+					style="font-size: 25px; text-align: center">Numero de pastillas</label>
+				<select id="id_select_reminder_bills4" class="selectBillsType"
+					name="s_reminder_bills4">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+				</select> <input id="id_reminder_input_4" class="c_reminderInput" type="time"
+					style="font-size: 25px; text-align: center"></input>
+
+			</div>
+			<div id="id_remind_run4" style="display: none;">
+				<div id="id_reminder_active_4" ALIGN="CENTER"
+					style="font-size: 80px; color: #f92307">04:20</div>
+				<div id="id_reminder_billsno_4" ALIGN="CENTER"
+					style="font-size: 35px; color: #ffffff">
+					<img id="id_reminder_status_4" src="images/icon_bill_red_0.png"
+						width="85" height="50" />
+				</div>
+			</div>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar" id="id_remind4_navbar1" class="c_navbar1">
+				<ul>
+					<li><a href="" id="id_remind_set4" class="c_SetBtn"
+						style="font-size: 22px; color: #ffffff">Establecer</a></li>
+					<li><a href="" id="id_remind_record4" class="c_RecordBtn"
+						style="font-size: 22px; color: #ffffff">Grabar</a></li>
+				</ul>
+			</div>
+			<div data-role="navbar" id="id_remind4_navbar2"
+				style="display: none;">
+				<ul>
+					<li><a href="" id="id_remind_stop4" class="c_StopBtn"
+						style="font-size: 22px; color: #ffffff">Parar</a></li>
+					<li><a href="" id="id_remind_mute4" class="c_MuteBtn"
+						style="font-size: 22px; color: #ffffff">Silenciar</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- reminder 5 -->
+
+	<div data-role="page" id="page_reminder5" data-theme="b"
+		data-fullscreen="true">
+		<div data-role="header" data-position="fixed">
+			<div id="id_reminder_header_5" Align="Center"
+				style="font-size: 25px; color: #d4f828">Recordatorio 5</div>
+		</div>
+
+		<div data-role="content">
+
+			<div id="id_reminder_set5">
+				<label for="s_reminder_bills5" id="id_s_notify"
+					style="font-size: 25px; text-align: center">Numero de pastillas</label>
+				<select id="id_select_reminder_bills5" class="selectBillsType"
+					name="s_reminder_bills5">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+				</select> <input id="id_reminder_input_5" class="c_reminderInput" type="time"
+					style="font-size: 25px; text-align: center"></input>
+
+			</div>
+			<div id="id_remind_run5" style="display: none;">
+				<div id="id_reminder_active_5" ALIGN="CENTER"
+					style="font-size: 80px; color: #d4f828">04:20</div>
+				<div id="id_reminder_billsno_5" ALIGN="CENTER"
+					style="font-size: 35px; color: #ffffff">
+					<img id="id_reminder_status_5" src="images/icon_bill_yellow_0.png"
+						width="85" height="50" />
+				</div>
+			</div>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar" id="id_remind5_navbar1" class="c_navbar1">
+				<ul>
+					<li><a href="" id="id_remind_set5" class="c_SetBtn"
+						style="font-size: 22px; color: #ffffff">Establecer</a></li>
+					<li><a href="" id="id_remind_record5" class="c_RecordBtn"
+						style="font-size: 22px; color: #ffffff">Grabar</a></li>
+				</ul>
+			</div>
+			<div data-role="navbar" id="id_remind5_navbar2"
+				style="display: none;">
+				<ul>
+					<li><a href="" id="id_remind_stop5" class="c_StopBtn"
+						style="font-size: 22px; color: #ffffff">Parar</a></li>
+					<li><a href="" id="id_remind_mute5" class="c_MuteBtn"
+						style="font-size: 22px; color: #ffffff">Silenciar</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- reminder 6 -->
+
+	<div data-role="page" id="page_reminder6" data-theme="b"
+		data-fullscreen="true">
+		<div data-role="header" data-position="fixed">
+			<div id="id_reminder_header_6" Align="Center"
+				style="font-size: 25px; color: #ffffff">Recordatorio 6</div>
+		</div>
+
+		<div data-role="content">
+
+			<div id="id_reminder_set6">
+				<label for="s_reminder_bills6" id="id_s_notify"
+					style="font-size: 25px; text-align: center">Numero de pastillas</label>
+				<select id="id_select_reminder_bills6" class="selectBillsType"
+					name="s_reminder_bills6">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+				</select> <input id="id_reminder_input_6" class="c_reminderInput" type="time"
+					style="font-size: 25px; text-align: center"></input>
+
+			</div>
+			<div id="id_remind_run6" style="display: none;">
+				<div id="id_reminder_active_6" ALIGN="CENTER"
+					style="font-size: 80px; color: #ffffff">04:20</div>
+				<div id="id_reminder_billsno_6" ALIGN="CENTER"
+					style="font-size: 35px; color: #ffffff">
+					<img id="id_reminder_status_6" src="images/icon_bill_white_0.png"
+						width="85" height="50" />
+				</div>
+			</div>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar" id="id_remind6_navbar1" class="c_navbar1">
+				<ul>
+					<li><a href="" id="id_remind_set6" class="c_SetBtn"
+						style="font-size: 22px; color: #ffffff">Establecer</a></li>
+					<li><a href="" id="id_remind_record6" class="c_RecordBtn"
+						style="font-size: 22px; color: #ffffff">Grabar</a></li>
+				</ul>
+			</div>
+			<div data-role="navbar" id="id_remind6_navbar2"
+				style="display: none;">
+				<ul>
+					<li><a href="" id="id_remind_stop6" class="c_StopBtn"
+						style="font-size: 22px; color: #ffffff">Parar</a></li>
+					<li><a href="" id="id_remind_mute6" class="c_MuteBtn"
+						style="font-size: 22px; color: #ffffff">Silenciar</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- Quick -->
+
+	<div data-role="page" id="page_quick" data-theme="b"
+		data-fullscreen="true">
+		<div data-role="header" data-position="fixed">
+			<div id="id_quick_header" Align="Center"
+				style="font-size: 25px; color: #fff">Rápido</div>
+		</div>
+
+		<div data-role="content">
+			<label for="s_quick_times" id="id_s_quick_times"
+				style="font-size: 25px; text-align: center">Por día</label> <select
+				id="id_select_dosages" class="selectDosageType" name="s_quick_times">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+			</select> <label for="s_quick_hours" id="id_s_quick_hours"
+				style="font-size: 25px; text-align: center">Cada</label> <select
+				id="id_select_preiod" class="selectPeriodType" name="s_quick_hours">
+				<option value="1">1 hora</option>
+				<option value="2">2 horas</option>
+				<option value="3">3 horas</option>
+				<option value="4">4 horas</option>
+				<option value="5">5 horas</option>
+				<option value="6">6 horas</option>
+				<option value="7">7 horas</option>
+				<option value="8">8 horas</option>
+				<option value="9">9 horas</option>
+				<option value="10">10 horas</option>
+				<option value="11">11 horas</option>
+				<option value="12">12 horas</option>
+			</select>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar" id="id_quick_navbar">
+				<ul>
+					<li><a href="" id="id_quick_set" class="c_QuickBtn"
+						style="font-size: 22px; color: #ffffff">Establecer</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Colors -->
+
+	<div data-role="page" id="page_colors" data-theme="b"
+		data-fullscreen="true">
+		<div data-role="header" data-position="fixed">
+			<div id="id_quick_header" Align="Center"
+				style="font-size: 25px; color: #fff">Color pastillas</div>
+		</div>
+
+		<div data-role="content">
+			<label for="s_pill_id" id="id_s_pill_id"
+				style="font-size: 25px; text-align: center">Pastilla</label> <select
+				id="id_select_pill" name="s_pill_id">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+			</select> <label for="s_color" id="id_s_color"
+				style="font-size: 25px; text-align: center">Color</label> <select
+				id="id_select_color" name="s_color">
+				<option value="green">Verde</option>
+				<option value="blue">Azul</option>
+				<option value="viola">Violeta</option>
+				<option value="red">Rojo</option>
+				<option value="yellow">Amarillo</option>
+				<option value="white">Blanco</option>
+				<option value="pink">Rosa</option>
+				<option value="sky">Azul claro</option>
+			</select>
+		</div>
+	</div>
+
+	<!-- Page recording -->
+
+	<div data-role="page" id="page_record" data-theme="b"
+		data-fullscreen="true">
+		<div data-role="header" data-position="fixed">
+			<div id="id_record_header" Align="Center" style="font-size: 35px;">Iniciando</div>
+		</div>
+
+		<div data-role="content">
+			<canvas id="recordCanvas" width="300" height="240"></canvas>
+		</div>
+	</div>
+
+	<!-- Page reminder -->
+	<div data-role="page" id="page_reminder_on" data-theme="b"
+		data-fullscreen="true">
+		<div data-role="header" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="" id="id_alarm_snooze"
+						style="font-size: 25px; color: #f99107">SILENCIAR</a></li>
+					<li><a href="" id="id_alarm_end"
+						style="font-size: 25px; color: #ff0000">FINALIZAR</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="content">
+			<div id="id_cuurent_time" ALIGN="CENTER"
+				style="font-size: 40px; color: #fff">00:00</div>
+		</div>
+		<div id="id_cuurent_bills" ALIGN="CENTER">
+			<img id="id_current_status" src="images/icon_bill_green_1.png"
+				width="85" height="50" />
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="" id="id_alarm_close"
+						style="font-size: 30px; color: #87ff4c">CERRAR</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="media">
+		<audio id="audio1" src=""></audio>
+		<audio id="audio2" src=""></audio>
+		<audio id="audio3" src=""></audio>
+		<audio id="audio4" src=""></audio>
+		<audio id="audio5" src=""></audio>
+		<audio id="audio6" src=""></audio>
+		<audio id="beepAudio" src="media/beep.mp3"></audio>
+	</div>
+</body>
+</html>

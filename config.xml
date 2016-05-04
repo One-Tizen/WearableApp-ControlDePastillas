@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://LunaWolfCorp/Pastillas" version="0.0.1" viewmodes="maximized">
+    <tizen:application id="Bi8bYZizQP.RecordatorioPastillas" package="Bi8bYZizQP" required_version="2.2"/>
+    <author href="http://foro.lunawolf.es" email="marco@lunawolf.es">BadWolf &amp; TheDoll</author>
+    <content src="index.html"/>
+    <feature name="http://tizen.org/feature/screen.size.all"/>
+    <icon src="icon.png"/>
+    <name>Pill Reminder</name>
+    <name xml:lang="gl-es">Recordatorio Pastillas</name>
+    <name xml:lang="eu-es">Recordatorio Pastillas</name>
+    <name xml:lang="es-es">Recordatorio Pastillas</name>
+    <name xml:lang="ca-es">Recordatorio Pastillas</name>
+    <tizen:privilege name="http://tizen.org/privilege/alarm"/>
+    <tizen:privilege name="http://tizen.org/privilege/filesystem.read"/>
+    <tizen:privilege name="http://tizen.org/privilege/filesystem.write"/>
+    <tizen:privilege name="http://tizen.org/privilege/system"/>
+    <tizen:privilege name="http://tizen.org/privilege/audiorecorder"/>
+    <tizen:privilege name="http://tizen.org/privilege/power"/>
+    <tizen:setting background-support="enable" encryption="enable" hwkey-event="enable"/>
+</widget>
